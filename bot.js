@@ -73,7 +73,19 @@ if(msg.content === "acryuz") {
             this.reply(msg, "Cursed, I'm gonna find you and shove a corn dog up your ass.");
             output("pong'd <b>" + msg.sender.username + "</b>");
         }
-
+  if(msg.content.substring(0,5)==="penis"){
+      if(msg.content.substring(6,10)=="anna"){
+          this.reply(msg,"You have a vagina! (!)");
+           output("pong'd <b>" + msg.sender.username + "</b>");
+      }
+      var penis = "";
+      var penislength = ((Math.random()*20)+1);
+      for(var i = 0; i < penislength;i++){
+          penis = penis + "三"
+      }
+       this.reply(msg, msg.content.substring(5,msg.content.length)+" 8"+penis+"D");
+        output("pong'd <b>" + msg.sender.username + "</b>");
+  }
     });
 
 
