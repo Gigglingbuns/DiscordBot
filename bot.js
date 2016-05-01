@@ -64,7 +64,10 @@ function startPingPong() {
             this.reply(msg, "party set to " + party);
             output("pong'd <b>" + msg.sender.username + "</b>");
         }
-
+          if(msg.content==="cursed"){
+              this.replt(msg,"██░▄██░██▄░░▄██░▄███▄\n████▀░░░▀████▀░░▀█▄▀▀\n████▄░░░░░██░░░░▄▄▀█▄\n██░▀██░░░░██░░░░▀███▀");
+               output("pong'd <b>" + msg.sender.username + "</b>");
+          }
         if(msg.content === "cursed") {
             this.reply(msg, "u have been cursed 4 lyfe now go die in a hole and jump into traffic no one cares and KYS");
             output("pong'd <b>" + msg.sender.username + "</b>");
