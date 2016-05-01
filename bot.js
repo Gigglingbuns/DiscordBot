@@ -66,7 +66,7 @@ function startPingPong() {
         }
 
         if(msg.content === "cursed") {
-            this.reply(msg, "like u have been cursed 4 lyfe now go die in a hole and jump into traffic no one cares and KYS");
+            this.reply(msg, "u have been cursed 4 lyfe now go die in a hole and jump into traffic no one cares and KYS");
             output("pong'd <b>" + msg.sender.username + "</b>");
         }
 if(msg.content === "acryuz") {
