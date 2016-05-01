@@ -73,6 +73,10 @@ if(msg.content === "acryuz") {
             this.reply(msg, "Cursed, I'm gonna find you and shove a corn dog up your ass.");
             output("pong'd <b>" + msg.sender.username + "</b>");
         }
+        
+        if(msg.content==="!tag"){
+            this.reply(msg,"〈ɪɳȷ〉                        (aka iguana jizz)");
+        }
   if(msg.content.substring(0,5)==="penis"){
       if(msg.content.substring(6,10)=="anna"){
           this.reply(msg,"You have a vagina! (!)");
