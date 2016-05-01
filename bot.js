@@ -77,14 +77,14 @@ if(msg.content === "acryuz") {
       if(msg.content.substring(6,10)=="anna"){
           this.reply(msg,"You have a vagina! (!)");
           
-      }
+      }else{
       var penis = "";
       var penislength = ((Math.random()*20)+1);
       for(var i = 0; i < penislength;i++){
           penis = penis + "三"
       }
        this.reply(msg, msg.content.substring(5,msg.content.length)+" 8"+penis+"D");
-        
+      }
   }
     });
 
