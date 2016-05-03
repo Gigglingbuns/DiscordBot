@@ -2,6 +2,14 @@ var classes = document.getElementsByClassName("outputConsole");
 var party = "";
 var pingPongRunning = false,
     pingPongClient;
+var coins;
+var people = {"hardeep","1it","crypton","nucleus","sheep","touka","jaws","reaper","goku","anna","peripsis","inferno","odyssey","cursed","acryuz","rampage","rubik","legend","muffin"};
+for(int i =0; i<people.length;i++){
+    people[i].setCoins(0);
+}
+function setCoins(ammount){
+    this.coins = ammount;
+}
 
 function getEmail() {
     if(document.getElementById("email").value)
