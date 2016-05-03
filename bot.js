@@ -11,7 +11,7 @@ function people(){
 //people.prototype.coins = 0;
 var hardeep = new people();
 function addCoins(ammount){
-    this.prototype.coins += ammount;
+    this.coins += ammount;
 }
 function getEmail() {
     if(document.getElementById("email").value)
