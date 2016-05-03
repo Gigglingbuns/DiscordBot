@@ -2,15 +2,17 @@ var classes = document.getElementsByClassName("outputConsole");
 var party = "";
 var pingPongRunning = false,
     pingPongClient;
-var coins;
-var people = {"hardeep","1it","crypton","nucleus","sheep","touka","jaws","reaper","goku","anna","peripsis","inferno","odyssey","cursed","acryuz","rampage","rubik","legend","muffin"};
-for(int i =0; i<people.length;i++){
-    people[i].setCoins(0);
-}
-function setCoins(ammount){
-    this.coins = ammount;
-}
 
+//var people = {"hardeep","1it","crypton","nucleus","sheep","touka","jaws","reaper","goku","anna","peripsis","inferno","odyssey","cursed","acryuz","rampage","rubik","legend","muffin"};
+
+function people(){
+    this.coins = 0;
+}
+//people.prototype.coins = 0;
+var hardeep = new people();
+function addCoins(ammount){
+    this.prototype.coins += ammount;
+}
 function getEmail() {
     if(document.getElementById("email").value)
         return document.getElementById("email").value;
@@ -72,10 +74,9 @@ function startPingPong() {
             this.reply(msg, "party set to " + party);
             output("pong'd <b>" + msg.sender.username + "</b>");
         }
-          if(msg.content==="kys"){
-              this.reply(msg,"\n██░▄██░██▄░░▄██░▄███▄\n████▀░░░▀████▀░░▀█▄▀▀\n████▄░░░░░██░░░░▄▄▀█▄\n██░▀██░░░░██░░░░▀███▀");
-               output("pong'd <b>" + msg.sender.username + "</b>");
-          }
+        if(msg.content=="hardeep"){
+            this.reply(msg,"I've never watched porn");
+        }
         if(msg.content === "cursed") {
             this.reply(msg, "u have been cursed 4 lyfe now go die in a hole and jump into traffic no one cares and KYS");
             output("pong'd <b>" + msg.sender.username + "</b>");
