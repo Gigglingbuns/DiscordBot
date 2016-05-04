@@ -14,7 +14,7 @@ Random:
 
 To-Do List:
 - Yes/No Fortune Teller
-- Coin system
+- Coin system -->getCoin/setCoin
 - Gamble system
 - Bet system
 
