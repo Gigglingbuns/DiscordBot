@@ -3,13 +3,13 @@ var party = "";
 var pingPongRunning = false,
     pingPongClient;
 var person = function () {
-    this.coins = 0;
+    this.coins = 50;
 }
 person.prototype.addCoins = function (amount) {
     this.coins += amount;
 }
 var hardeep = new person();
-var ry = new person();
+var riyaj = new person();
 var lit = new person();
 var crypton = new person();
 var nucleus = new person();
@@ -34,14 +34,12 @@ function getEmail() {
     else
         return prompt("Email?")
 }
-
 function getPassword() {
     if(document.getElementById("password").value)
         return document.getElementById("password").value;
     else
         return prompt("Password?")
 }
-
 function toggleStateOfPingPong() {
     if(pingPongRunning) {
         pingPongClient.logout();
@@ -111,6 +109,12 @@ function startPingPong() {
                         this.reply(msg, "no ammount to be added found");
                     } else
                         sheep.addCoins(ammount);
+                } else if(msg.content.substring(8, 13) == "riyaj") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        riyaj.addCoins(ammount);
                 } else if(msg.content.substring(8, 13) == "touka") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
@@ -219,7 +223,15 @@ function startPingPong() {
         }
 
         if(msg.content === "!tag") {
-            this.reply(msg, "〈ɪɳȷ〉                        (aka iguana jizz)");
+            this.reply(msg, "〈ɪɳȷ〉                                                                                 (aka iguana jizz)");
+        }
+        if(msg.content.substring(0,3) ==="bet"){
+            var ammount = parseInt();
+            if(!isNaN(ammount)){
+            betMoney(ammount);
+            } else {
+                reply(msg,"Please insert an ammount to bet");
+            }
         }
         if(msg.content.substring(0, 5) === "penis") {
             if(msg.content.substring(6, 10) == "anna") {
@@ -236,7 +248,9 @@ function startPingPong() {
         }
     });
 
-
+    function betMoney(ammount){
+        
+    }
 
     pingPongClient.login(getEmail(), getPassword()).catch(error);
     output("logging in...");
