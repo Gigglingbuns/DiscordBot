@@ -13,7 +13,7 @@ Random:
 - cursed
 
 To-Do List:
-- Yes/No Fortune Teller
+- Yes/No Fortune Teller ( I SWEAR I THOUGHT OF THIS BEFORE WHOEVER BOTCHAN IMPLEMENTED IT )
 - Coin system -->getCoin/setCoin
 - Gamble system
 - Bet system
