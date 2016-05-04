@@ -9,6 +9,7 @@ person.prototype.addCoins = function (amount) {
     this.coins += amount;
 }
 var hardeep = new person();
+var ry = new person();
 var lit = new person();
 var crypton = new person();
 var nucleus = new person();
