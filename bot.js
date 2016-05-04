@@ -2,18 +2,17 @@ var classes = document.getElementsByClassName("outputConsole");
 var party = "";
 var pingPongRunning = false,
     pingPongClient;
-
-
-
-var person = function () { this.coins = 0;  } 
-person.prototype.addCoins = function(amount){ 
-    this.coins += amount;  
+var person = function () {
+    this.coins = 0;
+}
+person.prototype.addCoins = function (amount) {
+    this.coins += amount;
 }
 var hardeep = new person();
 var lit = new person();
 var crypton = new person();
 var nucleus = new person();
-var sheep = new pesron();
+var sheep = new person();
 var touka = new person();
 var jaws = new person();
 var reaper = new person();
@@ -34,12 +33,14 @@ function getEmail() {
     else
         return prompt("Email?")
 }
+
 function getPassword() {
     if(document.getElementById("password").value)
         return document.getElementById("password").value;
     else
         return prompt("Password?")
 }
+
 function toggleStateOfPingPong() {
     if(pingPongRunning) {
         pingPongClient.logout();
@@ -56,51 +57,145 @@ function toggleStateOfPingPong() {
         document.getElementById("pingpongbutton").className = "stopButton";
     }
 }
+
 function startPingPong() {
     function output(t) {
         document.getElementById("pingpongoutput").innerHTML += "> " + t + "<br/>"
     }
+
     function error(e) {
         output(e + " - <i><u>are you sure your user and pass is correct?</u></i>");
     }
     pingPongClient = new Discord.Client();
-    pingPongClient.once("ready", function() {
+    pingPongClient.once("ready", function () {
         output("ready! send the message <u><i>ping</i></u> in any of the following servers:");
         for(var sid in pingPongClient.servers) {
             output("<span class='light'> " + pingPongClient.servers[sid].name + "</span>");
         }
     });
-    
-    pingPongClient.on("message", function(msg) {
-        if(msg.content.substring(0,7) == "addcoin"){
-            if(!isNaN(parseFloat(n)) && isFinite(n)){
-               if(msg.content.substring()=="hardeep"){
 
-                } else if(msg.content.substring()=="1it"){
-                
-                } else if(msg.content.substring()=="crypton"){
-                
-                } else if(msg.content.substring()=="nucleus"){
-                    
-                } else if(msg.content.substring()=="sheep"){
-                    
-                } else if(msg.content.substring()==){
-                } else if(msg.content.substring()==){
-                } else if(msg.content.substring()==){
-                } else if(msg.content.substring()==){
-                } else if(msg.content.substring()==){
-                } else if(msg.content.substring()==){
-                } else if(msg.content.substring()==){
-                } else if(msg.content.substring()==){
-                } else if(msg.content.substring()==){
-                } else {
-                 this.reply(msg,"no user found");   
-                }
-             } else {
-                 this.reply(msg,"no ammount to be added found");
-             }
+    pingPongClient.on("message", function (msg) {
+        if(msg.content.substring(0, 7) == "getcoin") {
+
         }
-        
+        if(msg.content.substring(0, 7) == "addcoin") {
+            if(!isNaN(parseFloat(n)) && isFinite(n)) {
+                if(msg.content.substring(8, 15) == "hardeep") {
+                    var ammount = parseInt(msg.content.substring(16));
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        hardeep.addCoins();
+                } else if(msg.content.substring(8, 11) == "1it") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        lit.addCoins();
+                } else if(msg.content.substring(8, 15) == "crypton") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        crypton.addCoins();
+                } else if(msg.content.substring(8, 15) == "nucleus") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        nucleus.addCoins();
+                } else if(msg.content.substring(8, 13) == "sheep") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        sheep.addCoins();
+                } else if(msg.content.substring(8, 13) == "touka") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        touka.addCoins();
+                } else if(msg.content.substring(8, 12) == "jaws") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        jaws.addCoins();
+                } else if(msg.content.substring(8, 14) == "reaper") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        reaper.addCoins();
+                } else if(msg.content.substring(8, 12) == "goku") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        goku.addCoins();
+                } else if(msg.content.substring(8, 12) == "anna") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        anna.addCoins();
+                } else if(msg.content.substring(8, 12) == "sway") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        sway.addCoins();
+                } else if(msg.content.substring(8, 16) == "peripsis") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        peripsis.addCoins();
+                } else if(msg.content.substring(8, 15) == "odyssey") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        odyssey.addCoins();
+                } else if(msg.content.substring(8, 14) == "cursed") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        cursed.addCoins();
+                } else if(msg.content.substring(8, 14) == "acryuz") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        acryuz.addCoins();
+                } else if(msg.content.substring(8, 15) == "rampage") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        rampage.addCoins();
+                } else if(msg.content.substring(8, 13) == "rubik") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        rubik.addCoins();
+                } else if(msg.content.substring(8, 14) == "legend") {
+                    var ammount = parseInt(msg.content.substring());
+                    if(isNaN(ammount)) {
+                        this.reply(msg, "no ammount to be added found");
+                    } else
+                        legend.addCoins();
+                } else {
+                    this.reply(msg, "no user found");
+                }
+            } else {
+                this.reply(msg, "no ammount to be added found");
+            }
+        }
+
         if(msg.content === "party") {
             this.reply(msg, party);
             output("pong'd <b>" + msg.sender.username + "</b>");
@@ -110,34 +205,34 @@ function startPingPong() {
             this.reply(msg, "party set to " + party);
             output("pong'd <b>" + msg.sender.username + "</b>");
         }
-        if(msg.content=="hardeep"){
-            this.reply(msg,"'I've never watched porn' - Hardeep 2016");
+        if(msg.content == "hardeep") {
+            this.reply(msg, "'I've never watched porn' - Hardeep 2016");
         }
         if(msg.content === "cursed") {
             this.reply(msg, "u have been cursed 4 lyfe now go die in a hole and jump into traffic no one cares and KYS");
             output("pong'd <b>" + msg.sender.username + "</b>");
         }
-if(msg.content === "acryuz") {
+        if(msg.content === "acryuz") {
             this.reply(msg, "Cursed, I'm gonna find you and shove a corn dog up your ass.");
             output("pong'd <b>" + msg.sender.username + "</b>");
         }
-        
-        if(msg.content==="!tag"){
-            this.reply(msg,"〈ɪɳȷ〉                        (aka iguana jizz)");
+
+        if(msg.content === "!tag") {
+            this.reply(msg, "〈ɪɳȷ〉                        (aka iguana jizz)");
         }
-  if(msg.content.substring(0,5)==="penis"){
-      if(msg.content.substring(6,10)=="anna"){
-          this.reply(msg,"You have a vagina! (!)");
-          
-      }else{
-      var penis = "";
-      var penislength = ((Math.random()*20)+1);
-      for(var i = 0; i < penislength;i++){
-          penis = penis + "三"
-      }
-       this.reply(msg, msg.content.substring(5,msg.content.length)+" 8"+penis+"D");
-      }
-  }
+        if(msg.content.substring(0, 5) === "penis") {
+            if(msg.content.substring(6, 10) == "anna") {
+                this.reply(msg, "You have a vagina! (!)");
+
+            } else {
+                var penis = "";
+                var penislength = ((Math.random() * 20) + 1);
+                for(var i = 0; i < penislength; i++) {
+                    penis = penis + "三"
+                }
+                this.reply(msg, msg.content.substring(5, msg.content.length) + " 8" + penis + "D");
+            }
+        }
     });
 
 
@@ -149,7 +244,7 @@ if(msg.content === "acryuz") {
 
 
 
-var fn = function() {
+var fn = function () {
     this.innerHTML = "";
 }
 for(var i = 0; i < classes.length; i++) {
