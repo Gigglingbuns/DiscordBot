@@ -86,109 +86,109 @@ function startPingPong() {
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        hardeep.addCoins();
+                        hardeep.addCoins(ammount);
                 } else if(msg.content.substring(8, 11) == "1it") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        lit.addCoins();
+                        lit.addCoins(ammount);
                 } else if(msg.content.substring(8, 15) == "crypton") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        crypton.addCoins();
+                        crypton.addCoins(ammount);
                 } else if(msg.content.substring(8, 15) == "nucleus") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        nucleus.addCoins();
+                        nucleus.addCoins(ammount);
                 } else if(msg.content.substring(8, 13) == "sheep") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        sheep.addCoins();
+                        sheep.addCoins(ammount);
                 } else if(msg.content.substring(8, 13) == "touka") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        touka.addCoins();
+                        touka.addCoins(ammount);
                 } else if(msg.content.substring(8, 12) == "jaws") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        jaws.addCoins();
+                        jaws.addCoins(ammount);
                 } else if(msg.content.substring(8, 14) == "reaper") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        reaper.addCoins();
+                        reaper.addCoins(ammount);
                 } else if(msg.content.substring(8, 12) == "goku") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        goku.addCoins();
+                        goku.addCoins(ammount);
                 } else if(msg.content.substring(8, 12) == "anna") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        anna.addCoins();
+                        anna.addCoins(ammount);
                 } else if(msg.content.substring(8, 12) == "sway") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        sway.addCoins();
+                        sway.addCoins(ammount);
                 } else if(msg.content.substring(8, 16) == "peripsis") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        peripsis.addCoins();
+                        peripsis.addCoins(ammount);
                 } else if(msg.content.substring(8, 15) == "odyssey") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        odyssey.addCoins();
+                        odyssey.addCoins(ammount);
                 } else if(msg.content.substring(8, 14) == "cursed") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        cursed.addCoins();
+                        cursed.addCoins(ammount);
                 } else if(msg.content.substring(8, 14) == "acryuz") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        acryuz.addCoins();
+                        acryuz.addCoins(ammount);
                 } else if(msg.content.substring(8, 15) == "rampage") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        rampage.addCoins();
+                        rampage.addCoins(ammount);
                 } else if(msg.content.substring(8, 13) == "rubik") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        rubik.addCoins();
+                        rubik.addCoins(ammount);
                 } else if(msg.content.substring(8, 14) == "legend") {
                     var ammount = parseInt(msg.content.substring());
                     if(isNaN(ammount)) {
                         this.reply(msg, "no ammount to be added found");
                     } else
-                        legend.addCoins();
+                        legend.addCoins(ammount);
                 } else {
                     this.reply(msg, "no user found");
                 }
