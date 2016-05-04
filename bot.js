@@ -254,7 +254,7 @@ function startPingPong() {
           if (crypton.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            crypton.addCoins(ammount);
+            crypton.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 15) == "nucleus") { //nucleus
         var ammount = parseInt(msg.content.substring());
@@ -264,7 +264,7 @@ function startPingPong() {
           if (nucleus.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            nucleus.addCoins(ammount);
+            nucleus.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 13) == "sheep") { //sheep
         var ammount = parseInt(msg.content.substring());
@@ -274,7 +274,7 @@ function startPingPong() {
           if (sheep.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            sheep.addCoins(ammount);
+            sheep.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 13) == "riyaj") { //riyaj
         var ammount = parseInt(msg.content.substring());
@@ -284,7 +284,7 @@ function startPingPong() {
           if (riyaj.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            riyaj.addCoins(ammount);
+            riyaj.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 13) == "touka") { //touka
         var ammount = parseInt(msg.content.substring());
@@ -294,7 +294,7 @@ function startPingPong() {
           if (touka.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            touka.addCoins(ammount);
+            touka.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 12) == "jaws") { //jaws
         var ammount = parseInt(msg.content.substring());
@@ -304,7 +304,7 @@ function startPingPong() {
           if (jaws.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            jaws.addCoins(ammount);
+            jaws.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 14) == "reaper") { //reaper
         var ammount = parseInt(msg.content.substring());
@@ -324,7 +324,7 @@ function startPingPong() {
           if (goku.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            goku.addCoins(ammount);
+            goku.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 12) == "anna") { //anna
         var ammount = parseInt(msg.content.substring());
@@ -334,7 +334,7 @@ function startPingPong() {
           if (anna.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            anna.addCoins(ammount);
+            anna.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 12) == "sway") { //sway
         var ammount = parseInt(msg.content.substring());
@@ -344,7 +344,7 @@ function startPingPong() {
           if (sway.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            sway.addCoins(ammount);
+            sway.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 16) == "peripsis") { //peripsis
         var ammount = parseInt(msg.content.substring());
@@ -354,7 +354,7 @@ function startPingPong() {
           if (hardeep.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            peripsis.addCoins(ammount);
+            peripsis.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 15) == "odyssey") { //odyssey
         var ammount = parseInt(msg.content.substring());
@@ -364,7 +364,7 @@ function startPingPong() {
           if (hardeep.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            odyssey.addCoins(ammount);
+            odyssey.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 14) == "cursed") { //cursed
         var ammount = parseInt(msg.content.substring());
@@ -374,7 +374,7 @@ function startPingPong() {
           if (hardeep.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            cursed.addCoins(ammount);
+            cursed.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 14) == "acryuz") { //acryuz
         var ammount = parseInt(msg.content.substring());
@@ -384,7 +384,7 @@ function startPingPong() {
           if (hardeep.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            acryuz.addCoins(ammount);
+            acryuz.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 15) == "rampage") { //rampage
         var ammount = parseInt(msg.content.substring());
@@ -394,7 +394,7 @@ function startPingPong() {
           if (hardeep.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            rampage.addCoins(ammount);
+            rampage.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 13) == "rubik") { //rubik
         var ammount = parseInt(msg.content.substring());
@@ -404,7 +404,7 @@ function startPingPong() {
           if (hardeep.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            rubik.addCoins(ammount);
+            rubik.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 14) == "legend") { //legend
         var ammount = parseInt(msg.content.substring());
@@ -414,7 +414,7 @@ function startPingPong() {
           if (hardeep.coins < ammount) {
             this.reply(msg, "you don't have enough coins");
           } else
-            legend.addCoins(ammount);
+            legend.betCoins(ammount);
         }
       }
     }
