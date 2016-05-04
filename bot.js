@@ -3,14 +3,14 @@ var party = "";
 var pingPongRunning = false,
     pingPongClient;
 
-//var peopleToAdd = {"inferno","odyssey","cursed","acryuz","rampage","rubik","legend","muffin"};
+
 
 var person = function () { this.coins = 0;  } 
 person.prototype.addCoins = function(amount){ 
     this.coins += amount;  
 }
 var hardeep = new person();
-var 1it = new person();
+var lit = new person();
 var crypton = new person();
 var nucleus = new person();
 var sheep = new pesron();
@@ -34,14 +34,12 @@ function getEmail() {
     else
         return prompt("Email?")
 }
-
 function getPassword() {
     if(document.getElementById("password").value)
         return document.getElementById("password").value;
     else
         return prompt("Password?")
 }
-
 function toggleStateOfPingPong() {
     if(pingPongRunning) {
         pingPongClient.logout();
@@ -58,40 +56,47 @@ function toggleStateOfPingPong() {
         document.getElementById("pingpongbutton").className = "stopButton";
     }
 }
-
 function startPingPong() {
-
     function output(t) {
         document.getElementById("pingpongoutput").innerHTML += "> " + t + "<br/>"
     }
-
     function error(e) {
         output(e + " - <i><u>are you sure your user and pass is correct?</u></i>");
     }
-
     pingPongClient = new Discord.Client();
-
     pingPongClient.once("ready", function() {
         output("ready! send the message <u><i>ping</i></u> in any of the following servers:");
         for(var sid in pingPongClient.servers) {
             output("<span class='light'> " + pingPongClient.servers[sid].name + "</span>");
         }
     });
-
+    
     pingPongClient.on("message", function(msg) {
-
         if(msg.content.substring(0,7) == "addcoin"){
             if(!isNaN(parseFloat(n)) && isFinite(n)){
-               if(msg.content.substring()==){
-            /*    
-                } else if(){
+               if(msg.content.substring()=="hardeep"){
+
+                } else if(msg.content.substring()=="1it"){
                 
-                } else if(){
+                } else if(msg.content.substring()=="crypton"){
                 
+                } else if(msg.content.substring()=="nucleus"){
+                    
+                } else if(msg.content.substring()=="sheep"){
+                    
+                } else if(msg.content.substring()==){
+                } else if(msg.content.substring()==){
+                } else if(msg.content.substring()==){
+                } else if(msg.content.substring()==){
+                } else if(msg.content.substring()==){
+                } else if(msg.content.substring()==){
+                } else if(msg.content.substring()==){
+                } else if(msg.content.substring()==){
+                } else if(msg.content.substring()==){
                 } else {
                  this.reply(msg,"no user found");   
                 }
-            */ } else {
+             } else {
                  this.reply(msg,"no ammount to be added found");
              }
         }
@@ -142,10 +147,11 @@ if(msg.content === "acryuz") {
 
 }
 
+
+
 var fn = function() {
     this.innerHTML = "";
 }
-
 for(var i = 0; i < classes.length; i++) {
     classes[i].addEventListener("dblclick", fn, false);
 }
