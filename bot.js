@@ -2,9 +2,10 @@ var classes = document.getElementsByClassName("outputConsole");
 var party = "";
 var pingPongRunning = false,
   pingPongClient;
-var person = function() {
+var person = function(name) {
   this.coins = 50;
   this.bet = 0;
+  this.name = name;
 }
 person.prototype.addCoins = function(ammount) {
   this.coins += ammount;
@@ -13,25 +14,26 @@ person.prototype.betCoins = function(ammount) {
   this.bet += ammount;
 }
 
-var hardeep = new person();
-var riyaj = new person();
-var lit = new person();
-var crypton = new person();
-var nucleus = new person();
-var sheep = new person();
-var touka = new person();
-var jaws = new person();
-var reaper = new person();
-var goku = new person();
-var anna = new person();
-var sway = new person();
-var peripsis = new person();
-var odyssey = new person();
-var cursed = new person();
-var acryuz = new person();
-var rampage = new person();
-var rubik = new person();
-var legend = new person();
+var hardeep = new person("hardeep");
+var riyaj = new person("riyaj");
+var lit = new person("1it");
+var crypton = new person("crypton");
+var nucleus = new person("nucleus");
+var sheep = new person("sheep");
+var touka = new person("touka");
+var jaws = new person("jaws");
+var reaper = new person("reaper");
+var goku = new person("goku");
+var anna = new person("anna");
+var sway = new person("sway");
+var peripsis = new person("peripsis");
+var odyssey = new person("odyssey");
+var cursed = new person("cursed");
+var acryuz = new person("acryuz");
+var rampage = new person("rampage");
+var rubik = new person("rubik");
+var legend = new person("legend");
+var people = [hardeep, riyaj, lit, crypton, nucleus, sheep, touka, jaws, reaper, goku, anna, sway, peripsis, odyssey, cursed, acryuz, rampage, rubik, legend];
 
 function getEmail() {
   if (document.getElementById("email").value)
@@ -45,6 +47,17 @@ function getPassword() {
     return document.getElementById("password").value;
   else
     return prompt("Password?")
+}
+
+function getCoin(msg, person) {
+  var coin = 0;
+  for (var i = 0; i < people.length; i++) {
+    if (peolpe[i].name == person) {
+      coin = people[i].coins;
+    }
+  }
+  reply(msg, person + " has "
+    coin);
 }
 
 function toggleStateOfPingPong() {
@@ -74,7 +87,7 @@ function startPingPong() {
   }
   pingPongClient = new Discord.Client();
   pingPongClient.once("ready", function() {
-    output("ready! send the message <u><i>ping</i></u> in any of the following servers:");
+    output("Bot is activated in the following servers:");
     for (var sid in pingPongClient.servers) {
       output("<span class='light'> " + pingPongClient.servers[sid].name + "</span>");
     }
@@ -200,7 +213,20 @@ function startPingPong() {
         this.reply(msg, "no user found");
       }
     }
-
+    if (msg.content.substring(0, 7) == "getCoin") {
+      var a = msg.content.substring(8);
+      var b = false;
+      for (var i = 0; i < people.length; i++) {
+        if (people[i].name == a) {
+          b = true;
+        }
+      }
+      if (b) {
+        getCoin(msg, a);
+      } else {
+        reply(msg, "user not found");
+      }
+    }
     if (msg.content === "party") {
       this.reply(msg, party);
       output("pong'd <b>" + msg.sender.username + "</b>");
