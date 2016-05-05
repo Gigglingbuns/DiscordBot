@@ -13,7 +13,7 @@ person.prototype.addCoins = function(ammount) {
 person.prototype.betCoins = function(ammount) {
   this.bet += ammount;
 }
-
+var ruzyu = new pesron("ruzyu");
 var hardeep = new person("hardeep");
 var riyaj = new person("riyaj");
 var lit = new person("1it");
@@ -33,7 +33,7 @@ var acryuz = new person("acryuz");
 var rampage = new person("rampage");
 var rubik = new person("rubik");
 var legend = new person("legend");
-var people = [hardeep, riyaj, lit, crypton, nucleus, sheep, touka, jaws, reaper, goku, anna, sway, peripsis, odyssey, cursed, acryuz, rampage, rubik, legend];
+var people = [ruzyu,hardeep, riyaj, lit, crypton, nucleus, sheep, touka, jaws, reaper, goku, anna, sway, peripsis, odyssey, cursed, acryuz, rampage, rubik, legend];
 
 function getEmail() {
   if (document.getElementById("email").value)
@@ -49,14 +49,14 @@ function getPassword() {
     return prompt("Password?")
 }
 
-function getCoin(msg, person) {
+function getCoin(person) {
   var coin = 0;
   for (var i = 0; i < people.length; i++) {
     if (peolpe[i].name == person) {
       coin = people[i].coins;
     }
   }
-  reply(msg, person + " has "+ coin);
+  return coin;
 }
 
 function toggleStateOfPingPong() {
@@ -94,7 +94,13 @@ function startPingPong() {
 
   pingPongClient.on("message", function(msg) {
     if (msg.content.substring(0, 7) == "addcoin") {
-      if (msg.content.substring(8, 15) == "hardeep") {
+      if (msg.content.substring(8, 13) == "ruzyu") {
+        var ammount = parseInt(msg.content.substring(16));
+        if (isNaN(ammount)) {
+          this.reply(msg, "no ammount to be added found");
+        } else
+          ruzyu.addCoins(ammount);
+      } else if (msg.content.substring(8, 15) == "hardeep") {
         var ammount = parseInt(msg.content.substring(16));
         if (isNaN(ammount)) {
           this.reply(msg, "no ammount to be added found");
@@ -221,7 +227,7 @@ function startPingPong() {
         }
       }
       if (b) {
-        getCoin(msg, a);
+    reply(msg,getCoin(a));
       } else {
         reply(msg, "user not found");
       }
@@ -270,6 +276,16 @@ function startPingPong() {
             this.reply(msg, "you don't have enough coins");
           } else
             lit.betCoins(ammount);
+        }
+      } else if (msg.content.substring(8, 13) == "ruzyu") { //ruzyu
+        var ammount = parseInt(msg.content.substring());
+        if (isNaN(ammount)) {
+          this.reply(msg, "no ammount to be added found");
+        } else {
+          if (lit.coins < ammount) {
+            this.reply(msg, "you don't have enough coins");
+          } else
+            ruzyu.betCoins(ammount);
         }
       } else if (msg.content.substring(8, 15) == "crypton") { //crypton
         var ammount = parseInt(msg.content.substring());
