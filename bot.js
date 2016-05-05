@@ -235,7 +235,7 @@ function startPingPong() {
       }
     }
     if(msg.content === "1it"){
-      this.reply(msg,"'deez nutz'-1it 2016");
+      this.reply(msg,"'add me on pornhub' - 1it 2k16");
     }
     if (msg.content === "party") {
       this.reply(msg, party);
@@ -466,7 +466,7 @@ function startPingPong() {
     }
 
     if(msg.content=="legend"){
-      this.reply(msg,"shoutout to all my hoes, goku, crypton, touka, and sway");
+      this.reply(msg,"shoutout to all my hoes, goku, crypton, touka, burnt, cursed and sway");
     }
     if (msg.content.substring(0, 5) === "penis") {
       if (msg.content.substring(6, 10) == "anna" || msg.content.substring(6, 12) == "acryuz") {
