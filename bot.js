@@ -13,7 +13,7 @@ person.prototype.addCoins = function(ammount) {
 person.prototype.betCoins = function(ammount) {
   this.bet += ammount;
 }
-var ruzyu = new pesron("ruzyu");
+var ruzyu = new person("ruzyu");
 var hardeep = new person("hardeep");
 var riyaj = new person("riyaj");
 var lit = new person("1it");
