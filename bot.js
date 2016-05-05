@@ -227,12 +227,15 @@ function startPingPong() {
         }
       }
       if (b) {
-    reply(msg,getCoin(a));
+    this.reply(msg,getCoin(a));
  output("pong'd <b>" + msg.sender.username + "</b>");
       } else {
-        reply(msg, "user not found");
+        this.reply(msg, "user not found");
  output("pong'd <b>" + msg.sender.username + "</b>");
       }
+    }
+    if(msg.content === "1it"){
+      this.reply(msg,"'deez nutz'-1it 2016");
     }
     if (msg.content === "party") {
       this.reply(msg, party);
@@ -462,7 +465,9 @@ function startPingPong() {
       }
     }
 
-
+    if(msg.content=="legend"){
+      this.reply(msg,"shoutout to all my hoes, goku, crypton, touka, and sway");
+    }
     if (msg.content.substring(0, 5) === "penis") {
       if (msg.content.substring(6, 10) == "anna" || msg.content.substring(6, 12) == "acryuz") {
         this.reply(msg, "You have a vagina! (!)");
