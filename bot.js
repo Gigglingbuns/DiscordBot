@@ -56,8 +56,7 @@ function getCoin(msg, person) {
       coin = people[i].coins;
     }
   }
-  reply(msg, person + " has "
-    coin);
+  reply(msg, person + " has "+ coin);
 }
 
 function toggleStateOfPingPong() {
