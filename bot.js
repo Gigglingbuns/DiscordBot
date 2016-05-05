@@ -228,15 +228,17 @@ function startPingPong() {
       }
       if (b) {
     reply(msg,getCoin(a));
+ output("pong'd <b>" + msg.sender.username + "</b>");
       } else {
         reply(msg, "user not found");
+ output("pong'd <b>" + msg.sender.username + "</b>");
       }
     }
     if (msg.content === "party") {
       this.reply(msg, party);
       output("pong'd <b>" + msg.sender.username + "</b>");
     }
-    if (msg.content.substring(0, 9) == "setparty") {
+    if (msg.content.substring(0, 8) == "setparty") {
       party = msg.content.substring(10, msg.content.length);
       this.reply(msg, "party set to " + party);
       output("pong'd <b>" + msg.sender.username + "</b>");
