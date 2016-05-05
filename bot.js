@@ -239,7 +239,7 @@ function startPingPong() {
       output("pong'd <b>" + msg.sender.username + "</b>");
     }
     if (msg.content.substring(0, 8) == "setparty") {
-      party = msg.content.substring(10, msg.content.length);
+      party = msg.content.substring(9, msg.content.length);
       this.reply(msg, "party set to " + party);
       output("pong'd <b>" + msg.sender.username + "</b>");
     }
