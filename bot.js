@@ -93,6 +93,12 @@ function startPingPong() {
   });
 
   pingPongClient.on("message", function(msg) {
+    if(msg.content=="goku"){
+      this.reply(msg,"over 9000                                                             (what a gay message)");
+    }
+    if(msg.content=="cryp"){
+      this.reply(msg,"I'm gay                                                                     (suggested by goku)");
+    }
     if (msg.content.substring(0, 7) == "addcoin") {
       if (msg.content.substring(8, 13) == "ruzyu") {
         var ammount = parseInt(msg.content.substring(16));
