@@ -227,13 +227,15 @@ function startPingPong() {
     if (msg.content.substring(0, 7) == "getCoin") {
       var a = msg.content.substring(8);
       var b = false;
+      var c;
       for (var i = 0; i < people.length; i++) {
         if (people[i].name == a) {
           b = true;
+          c = people[i];
         }
       }
       if (b) {
-    this.reply(msg,getCoin(a));
+    this.reply(msg,c.getCoin(a));
  output("pong'd <b>" + msg.sender.username + "</b>");
       } else {
         this.reply(msg, "user not found");
