@@ -52,7 +52,7 @@ function getPassword() {
 function getCoin(person) {
   var coin = 0;
   for (var i = 0; i < people.length; i++) {
-    if (peolpe[i].name == person) {
+    if (people[i].name == person) {
       coin = people[i].coins;
     }
   }
