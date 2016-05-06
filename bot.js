@@ -49,7 +49,7 @@ function getPassword() {
     return prompt("Password?")
 }
 
-function getCoin(person) {
+person.prototype.getCoin = function(person) {
   var coin = 0;
   for (var i = 0; i < people.length; i++) {
     if (people[i].name == person) {
