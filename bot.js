@@ -6,6 +6,7 @@ var person = function(name) {
   this.coins = 50;
   this.bet = 0;
   this.name = name;
+ // this.penis = penis;
 }
 person.prototype.addCoins = function(ammount) {
   this.coins += ammount;
@@ -49,14 +50,14 @@ function getPassword() {
     return prompt("Password?")
 }
 
-person.prototype.getCoin = function(person) {
+person.prototype.getCoin = function(msg,person) {
   var coin = 0;
   for (var i = 0; i < people.length; i++) {
     if (people[i].name == person) {
       coin = people[i].coins;
     }
   }
-  return coin;
+ this.reply(msg,coin);
 }
 
 function toggleStateOfPingPong() {
@@ -235,7 +236,7 @@ function startPingPong() {
         }
       }
       if (b) {
-    this.reply(msg,c.getCoin(a));
+   getCoin(msg,c);
  output("pong'd <b>" + msg.sender.username + "</b>");
       } else {
         this.reply(msg, "user not found");
