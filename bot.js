@@ -244,7 +244,7 @@ function startPingPong() {
         }
       }
       if (b) {
-     c.getCoin(msg,a);
+     this.reply(msg,c.getCoin());
  output("pong'd <b>" + msg.sender.username + "</b>");
       } else {
         this.reply(msg, "user not found");
