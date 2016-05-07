@@ -8,13 +8,16 @@ Commands:
 - penis - find length of penis (randomized, but will be set in the future)
 
 Random:
-- anna
+- 1it
+- legend
+- cryp
+- goku
 - acryuz
 - cursed
 
 To-Do List:
 - Yes/No Fortune Teller ( I SWEAR I THOUGHT OF THIS BEFORE WHOEVER BOTCHAN IMPLEMENTED IT )
-- Coin system -->getCoin/setCoin
+- Coin system -->getCoin
 - Gamble system
 - Bet system
 
