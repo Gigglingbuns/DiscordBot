@@ -14,6 +14,9 @@ person.prototype.addCoins = function(ammount) {
 person.prototype.betCoins = function(ammount) {
   this.bet += ammount;
 }
+person.prototype.getName = function(){
+  return this.name;
+}
 var ruzyu = new person("ruzyu");
 var hardeep = new person("hardeep");
 var riyaj = new person("riyaj");
@@ -50,14 +53,19 @@ function getPassword() {
     return prompt("Password?")
 }
 
-person.prototype.getCoin = function(msg,person) {
+person.prototype.getCoin = function() {
   var coin = 0;
   for (var i = 0; i < people.length; i++) {
-    if (people[i].name == person) {
+    if (people[i] == this) {
       coin = people[i].coins;
     }
   }
- this.reply(msg,coin);
+ if(coin==0){
+   console.log("COIN NOT FOUND");
+   return coin;
+ }else{
+   return coin;
+ }
 }
 
 function toggleStateOfPingPong() {
@@ -236,7 +244,7 @@ function startPingPong() {
         }
       }
       if (b) {
-   getCoin(msg,c);
+     c.getCoin(msg,a);
  output("pong'd <b>" + msg.sender.username + "</b>");
       } else {
         this.reply(msg, "user not found");
