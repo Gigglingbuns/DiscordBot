@@ -56,7 +56,7 @@ function getPassword() {
 person.prototype.getCoin = function() {
   var coin = 0;
   for (var i = 0; i < people.length; i++) {
-    if (people[i].equals(this)) {
+    if (people[i].getName()==this.getName()) {
       coin = people[i].coins;
     }
   }
