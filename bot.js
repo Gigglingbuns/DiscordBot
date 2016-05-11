@@ -56,7 +56,7 @@ function getPassword() {
 person.prototype.getCoin = function() {
   var coin = 0;
   for (var i = 0; i < people.length; i++) {
-    if (people[i] == this) {
+    if (people[i].equals(this) {
       coin = people[i].coins;
     }
   }
@@ -107,6 +107,11 @@ function startPingPong() {
     }
     if(msg.content=="cryp"){
       this.reply(msg,"I'm gay                                                                     (suggested by goku)");
+    }
+    var dialogues = ["No, not in a million years","My subconscious tells me no","Nope, definitely not","I don't think so, but I could be wrong","Nope, not a chance","Probably, I don't see why not","My spiritual ancestors confirms, it is surely to happen!","Yes, it will happen 200%","My level of clairvoyance isn't proficient enough, ask botchan","Yes, I am completely certain"];
+    if(msg.content.substring(0,5).toLowerCase()=="should"||msg.content.substring(0,5).toLowerCase()=="would"){
+      var picker = Math.floor(Math.random()*(dialogues.length-1));
+      this.reply(msg,dialogues[picker])
     }
     if (msg.content.substring(0, 7) == "addcoin") {
       if (msg.content.substring(8, 13) == "ruzyu") {
