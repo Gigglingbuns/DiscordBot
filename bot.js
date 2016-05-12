@@ -238,7 +238,7 @@ function startPingPong() {
         this.reply(msg, "no user found");
       }
     }
-    if (msg.content.substring(0, 7) == "getCoin") {
+    if (msg.content.substring(0, 7).toLowerCase() == "getcoin") {
       var a = msg.content.substring(8);
       var b = false;
       var c;
