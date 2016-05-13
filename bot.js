@@ -305,7 +305,7 @@ function startPingPong() {
       this.reply(msg, "〈ɪɳȷ〉                                                                                  (aka Indian Jizz)");
     }
     if (msg.content.substring(0, 3) === "bet") {
-      if (msg.content.substring(8, 15) == "hardeep") { //subtract substring parameters by 3	//hardeep
+      if (msg.content.substring(4, 11) == "hardeep") { //subtract substring parameters by 3	//hardeep
         var ammount = parseInt(msg.content.substring(16)); //subtract substring parameters by 3
         if (isNaN(ammount)) {
           this.reply(msg, "no ammount to be added found");
@@ -315,7 +315,7 @@ function startPingPong() {
           } else
             hardeep.betCoins(ammount); //Change function to betCoins
         }
-      } else if (msg.content.substring(8, 11) == "1it") { //1it
+      } else if (msg.content.substring(4, 7) == "1it") { //1it
         var ammount = parseInt(msg.content.substring());
         if (isNaN(ammount)) {
           this.reply(msg, "no ammount to be added found");
@@ -506,6 +506,8 @@ function startPingPong() {
             legend.betCoins(ammount);
         }
       }
+    } else {
+      this.reply(msg,"user not found");
     }
 
     if(msg.content=="legend"){
