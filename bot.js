@@ -40,7 +40,7 @@ var acryuz = new person("acryuz");
 var rampage = new person("rampage");
 var rubik = new person("rubik");
 var legend = new person("legend");
-var people = [ruzyu,hardeep, riyaj, lit, crypton, nucleus, sheep, touka, jaws, reaper, goku, anna, sway, peripsis, odyssey, cursed, acryuz, rampage, rubik, legend];
+var people = [shepherd,doge,marferin,ruzyu,hardeep, riyaj, lit, crypton, nucleus, sheep, touka, jaws, reaper, goku, anna, sway, peripsis, odyssey, cursed, acryuz, rampage, rubik, legend];
 
 function getEmail() {
   if (document.getElementById("email").value)
