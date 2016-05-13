@@ -506,9 +506,7 @@ function startPingPong() {
             legend.betCoins(ammount);
         }
       }
-    } else {
-      this.reply(msg,"user not found");
-    }
+    } 
 
     if(msg.content=="legend"){
       this.reply(msg,"shoutout to all my hoes, goku, crypton, touka, burnt, cursed and sway");
