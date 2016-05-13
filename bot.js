@@ -17,6 +17,9 @@ person.prototype.betCoins = function(ammount) {
 person.prototype.getName = function(){
   return this.name;
 }
+var doge = new person("doge");
+var marferin = new person("marferin");
+var shepherd = new person("shepherd");
 var ruzyu = new person("ruzyu");
 var hardeep = new person("hardeep");
 var riyaj = new person("riyaj");
@@ -114,12 +117,30 @@ function startPingPong() {
       this.reply(msg,dialogues[picker])
     }
     if (msg.content.substring(0, 7) == "addcoin") {
-      if (msg.content.substring(8, 13) == "ruzyu") {
-        var ammount = parseInt(msg.content.substring(16));
+        if (msg.content.substring(8, 12) == "doge") {
+        var ammount = parseInt(msg.content.substring(13));
+        if (isNaN(ammount)) {
+          this.reply(msg, "no ammount to be added found");
+        } else
+          doge.addCoins(ammount);
+      } else if (msg.content.substring(8, 13) == "ruzyu") {
+        var ammount = parseInt(msg.content.substring(14));
         if (isNaN(ammount)) {
           this.reply(msg, "no ammount to be added found");
         } else
           ruzyu.addCoins(ammount);
+      } else if (msg.content.substring(8, 16) == "shepherd") {
+        var ammount = parseInt(msg.content.substring(17));
+        if (isNaN(ammount)) {
+          this.reply(msg, "no ammount to be added found");
+        } else
+          shepherd.addCoins(ammount);
+      } else if (msg.content.substring(8, 16) == "marferin") {
+        var ammount = parseInt(msg.content.substring(17));
+        if (isNaN(ammount)) {
+          this.reply(msg, "no ammount to be added found");
+        } else
+          marferin.addCoins(ammount);
       } else if (msg.content.substring(8, 15) == "hardeep") {
         var ammount = parseInt(msg.content.substring(16));
         if (isNaN(ammount)) {
