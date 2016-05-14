@@ -283,7 +283,7 @@ function startPingPong() {
     if(msg.content === "1it"){
       this.reply(msg,"'add me on pornhub' - 1it 2k16");
     }
-    if(msg.content.substring(0,6)=="gamble"{
+    if(msg.content.substring(0,6)=="gamble"){
       var a = 7;
       var b = false;
       var c = 0;
