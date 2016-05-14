@@ -291,7 +291,7 @@ function startPingPong() {
        for(var i=0;i<people.length;i++){
          a+=people[i].name.length;
          for(var j=0;j<people.length;j++){
-          if(msg.content.substring(7,a)==people[i].name){ //maybe .getName()
+          if(msg.content.substring(7,a)==people[i].getName){ //maybe .getName()
             b = true;
             c = a;
             f = people[i];
@@ -301,7 +301,7 @@ function startPingPong() {
        if(b){
         var d = parseInt(msg.content.substring(c+2));
         if(!isNaN(d)){
-         if(d>f.coins){  //maybe .getCoin()
+         if(d>f.getCoins){  //maybe .getCoin()
             this.reply("You don't have enough coins ("+d+")");
          } else {
            var g = Math.random()*100;
