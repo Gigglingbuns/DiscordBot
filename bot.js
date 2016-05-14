@@ -14,6 +14,9 @@ person.prototype.addCoins = function(ammount) {
 person.prototype.betCoins = function(ammount) {
   this.bet += ammount;
 }
+person.prototype.subtractCoins = function(ammount){
+  this.coins -= ammount;
+}
 person.prototype.getName = function(){
   return this.name;
 }
@@ -281,7 +284,42 @@ function startPingPong() {
       this.reply(msg,"'add me on pornhub' - 1it 2k16");
     }
     if(msg.content.substring(0,6)=="gamble"{
-    //add gamble here
+      var a = 7;
+      var b = false;
+      var c = 0;
+      var f;
+       for(var i=0;i<people.length;i++){
+         a+=people[i].name.length;
+         for(var j=0;j<people.length;j++){
+          if(msg.content.substring(7,a)==people[i].name){ //maybe .getName()
+            b = true;
+            c = a;
+            f = people[i];
+          }
+         }
+       }
+       if(b){
+        var d = parseInt(msg.content.substring(c+2));
+        if(!isNaN(d)){
+         if(d>f.coins){  //maybe .getCoin()
+            this.reply("You don't have enough coins ("+d+")");
+         } else {
+           var g = Math.random()*100;
+           var h = (g>50);
+           if(h){
+             f.addCoins(d);
+             this.reply("Rolled a "+h+". You won "+d+" coins")
+           }else{
+             f.subtractCoins(d);
+             this.reply("Rolled a "+h+". You lost "+d+" coins");
+           }
+         }
+        }else{
+          this.reply("ammount to gamble not found");
+        }
+       } else {
+         this.reply(msg,"user not found")
+       }
     }
     if (msg.content === "party") {
       this.reply(msg, party);
