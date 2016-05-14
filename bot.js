@@ -289,9 +289,9 @@ function startPingPong() {
       var c = 0;
       var f;
        for(var i=0;i<people.length;i++){
-         a+=people[i].name.length;
+         a+=people[i].getName().length;
          for(var j=0;j<people.length;j++){
-          if(msg.content.substring(7,a)==people[i].getName){ //maybe .getName()
+          if(msg.content.substring(7,a)==people[i].getName()){ //maybe .getName()
             b = true;
             c = a;
             f = people[i];
