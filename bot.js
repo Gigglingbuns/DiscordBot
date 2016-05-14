@@ -296,7 +296,7 @@ function startPingPong() {
             c = a;
             f = people[i];
           }
-         }
+         } a = 7;
        }
        if(b){
         var d = parseInt(msg.content.substring(c+2));
