@@ -119,7 +119,7 @@ function startPingPong() {
       var picker = Math.floor(Math.random()*(dialogues.length-1));
       this.reply(msg,dialogues[picker])
     }
-    setInterval(function(){ var a = ['hello','hi','hey','howdy','hey guys!','What's up guys']; var b = Math.floor(Math.random()*a.length); this.sendMessage(msg,a[b]); } ,69000);
+    setInterval(function(){ var a = ['hello','hi','hey','howdy','hey guys!','Hello guys']; var b = Math.floor(Math.random()*a.length); this.sendMessage(msg,a[b]); } ,69000);
     
     if (msg.content.substring(0, 7) == "addcoin") {
         if (msg.content.substring(8, 12) == "doge") {
