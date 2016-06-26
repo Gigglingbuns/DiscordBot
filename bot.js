@@ -103,7 +103,7 @@ function startPingPong() {
         setInterval(function() {
             var a = ['hello', 'hi', 'hey', 'howdy', 'hey guys!', 'Hello guys'];
             var b = Math.floor(Math.random() * a.length);
-            this.sendMessage(msg, a[b]);
+            this.reply(msg, a[b]);
         }, 69000);
         if (msg.content == "goku") {
             this.reply(msg, "over 9000                                                             (what a gay message)");
