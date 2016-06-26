@@ -100,11 +100,13 @@ function startPingPong() {
         }
     });
     pingPongClient.on("message", function(msg) {
+        if(msg.content=="123"){
         setInterval(function() {
             var a = ['hello', 'hi', 'hey', 'howdy', 'hey guys!', 'Hello guys'];
             var b = Math.floor(Math.random() * a.length);
             this.reply(msg, a[b]);
         }, 69000);
+        }
         if (msg.content == "goku") {
             this.reply(msg, "over 9000                                                             (what a gay message)");
         }
