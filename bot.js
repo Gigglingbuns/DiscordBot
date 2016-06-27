@@ -85,7 +85,7 @@ function toggleStateOfPingPong() {
         document.getElementById("pingpongbutton").className = "stopButton";
     }
 }
-function beefpoop(msg,a,b){
+function beefpoop(msg,c){
                 setInterval(this.reply(msg,c),69000);
             }
 function startPingPong() {
