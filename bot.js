@@ -85,6 +85,9 @@ function toggleStateOfPingPong() {
         document.getElementById("pingpongbutton").className = "stopButton";
     }
 }
+function beefpoop(msg,a,b){
+                setInterval(this.reply(msg,c),69000);
+            }
 function startPingPong() {
     function output(t) {
         document.getElementById("pingpongoutput").innerHTML += "> " + t + "<br/>"
@@ -101,11 +104,10 @@ function startPingPong() {
     });
     pingPongClient.on("message", function(msg) {
         if(msg.content=="123"){
-        setInterval(function() {
             var a = ['hello', 'hi', 'hey', 'howdy', 'hey guys!', 'Hello guys'];
             var b = Math.floor(Math.random() * a.length);
-            this.reply(msg, a[b]);
-        }, 69000);
+            var c = a[b];
+            beefpoop(msg,c);
         }
         if (msg.content == "goku") {
             this.reply(msg, "over 9000                                                             (what a gay message)");
@@ -116,7 +118,7 @@ function startPingPong() {
         var dialogues = ["f*** off sir", "yes", "no", "No, not in a million years", "My subconscious tells me no", "Nope, definitely not", "I don't think so, but I could be wrong", "Nope, not a chance", "Probably, I don't see why not", "My spiritual ancestors confirms, it is surely to happen!", "Yes, it will happen 200%", "My level of clairvoyance isn't proficient enough, ask botchan", "Yes, I am completely certain"];
         if (msg.content.substring(0, 6).toLowerCase() == "should" || msg.content.substring(0, 5).toLowerCase() == "would") {
             var picker = Math.floor(Math.random() * (dialogues.length - 1));
-            this.reply(msg, dialogues[picker])
+            this.reply(msg, dialogues[picker]);
         }
         if (msg.content.substring(0, 7) == "addcoin") {
             if (msg.content.substring(8, 12) == "doge") {
