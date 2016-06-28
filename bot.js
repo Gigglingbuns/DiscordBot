@@ -85,9 +85,6 @@ function toggleStateOfPingPong() {
         document.getElementById("pingpongbutton").className = "stopButton";
     }
 }
-function beefpoop(msg,c){
-                setInterval(this.reply(msg,c),69000);
-            }
 function startPingPong() {
     function output(t) {
         document.getElementById("pingpongoutput").innerHTML += "> " + t + "<br/>"
@@ -104,10 +101,7 @@ function startPingPong() {
     });
     pingPongClient.on("message", function(msg) {
         if(msg.content=="123"){
-            var a = ['hello', 'hi', 'hey', 'howdy', 'hey guys!', 'Hello guys'];
-            var b = Math.floor(Math.random() * a.length);
-            var c = a[b];
-            beefpoop(msg,c);
+           this.sendMessage(msg,"poop");
         }
         if (msg.content == "goku") {
             this.reply(msg, "over 9000                                                             (what a gay message)");
