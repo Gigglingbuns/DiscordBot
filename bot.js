@@ -98,7 +98,7 @@ function startPingPong() {
     pingPongClient.on("message", function(msg) {
         if(msg.content=="123"){
             
-            for (var i=0;i<2000;i++){
+            for (var i=0;i<10000;i++){
                 console.log(i);
             }
            this.sendMessage(msg,"poop");
