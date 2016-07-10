@@ -19,6 +19,9 @@ person.prototype.subtractCoins = function(ammount) {
 person.prototype.getName = function() {
     return this.name;
 }
+person.prototype.getPenis = function(){
+    return this.penis;
+}
 var cuffin = new person("cuffin",15);
 var blazingfire = new person("@BlazingFire007",12);
 var gabidou = new person("@Gabidou99",7);
@@ -84,7 +87,7 @@ function toggleStateOfPingPong() {
 }
 function startPingPong() {
     function output(t) {
-        document.getElementById("pingpongoutput").innerHTML += "> " + t + "<br/>"
+        document.getElementById("pingpongoutput").innerHTML += "> " + t + "<br/>";
     }
     function error(e) {
         output(e + " - <i><u>are you sure your user and pass is correct?</u></i>");
@@ -172,17 +175,22 @@ function startPingPong() {
         if (msg.content.substring(0, 5) === "penis") {
                 var penis = "";
                 var penislength = 0;
-                
-            if (false){
+                var dude;
+                var checker = false;
+                for(var ib = 0; i<people.length;ib++){
+                    if(people[ib].getName == msg.content.substring(6)){
+                        penislength = people[ib].getPenis();
+                        checker = true;
+                    }
+                }
+                if(!checker){
+                     penislength = ((Math.random() * 20) + 1);
+                }
+
+                for (var ia = 0; ia < penislength; ia++) {
+                    penis = penis + "三";
                 }
                 this.reply(msg, msg.content.substring(5, msg.content.length) + " 8" + penis + "D");
-            } else {
-                 penislength = ((Math.random() * 20) + 1);
-                for (var i = 0; i < penislength; i++) {
-                    penis = penis + "三"
-                }
-                this.reply(msg, msg.content.substring(5, msg.content.length) + " 8" + penis + "D");
-            }
         }
     });
     pingPongClient.login(getEmail(), getPassword()).catch(error);
