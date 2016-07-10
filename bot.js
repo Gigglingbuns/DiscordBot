@@ -36,8 +36,9 @@ var zuppyterra = new person("@Zuppyterra",6);
 var haidere = new person("@[RDT] Hai Dere",10);
 var GenerikShadow = new person("@GenerikShadow",9);
 var killer = new person("@The Killer",11);
+var test = new person("@belungawhale",12);
 
-var people = [cuffin,blazingfire,gabidou,pike,rh1,teyru,cavalry,demic,gigglingbuns,eclipse,flames,drflash55,nickmushu,zuppyterra,haidere,GenerikShadow,killer];
+var people = [test,cuffin,blazingfire,gabidou,pike,rh1,teyru,cavalry,demic,gigglingbuns,eclipse,flames,drflash55,nickmushu,zuppyterra,haidere,GenerikShadow,killer];
 
 function getEmail() {
     if (document.getElementById("email").value)
@@ -171,9 +172,8 @@ function startPingPong() {
         if (msg.content.substring(0, 5) === "penis") {
                 var penis = "";
                 var penislength = 0;
-            if (msg.content.substring(6, 10) == "anna" || msg.content.substring(6, 12) == "acryuz") {
-for (var i = 0; i < penislength; i++) {
-                    penis = penis + "三"
+                
+            if (false){
                 }
                 this.reply(msg, msg.content.substring(5, msg.content.length) + " 8" + penis + "D");
             } else {
