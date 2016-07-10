@@ -99,14 +99,9 @@ function startPingPong() {
         if(msg.content=="123"){
            this.sendMessage(msg,"poop");
         }
-        if (msg.content == "goku") {
-            this.reply(msg, "over 9000                                                             (what a gay message)");
-        }
-        if (msg.content == "cryp") {
-            this.reply(msg, "I'm gay                                                                     (suggested by goku)");
-        }
-        var dialogues = ["f*** off sir", "yes", "no", "No, not in a million years", "My subconscious tells me no", "Nope, definitely not", "I don't think so, but I could be wrong", "Nope, not a chance", "Probably, I don't see why not", "My spiritual ancestors confirms, it is surely to happen!", "Yes, it will happen 200%", "My level of clairvoyance isn't proficient enough, ask botchan", "Yes, I am completely certain"];
-        if (msg.content.substring(0, 6).toLowerCase() == "should" || msg.content.substring(0, 5).toLowerCase() == "would") {
+     
+        var dialogues = ["Only pingu knows the answer to that.","Never, never ever ever ever ever.", "yes", "no", "No, not in a million years", "My subconscious tells me no", "Nope, definitely not", "I don't think so, but I could be wrong", "Nope, not a chance", "Probably, I don't see why not", "My spiritual ancestors confirms, it is surely to happen!", "Yes, it will happen 200%", "My level of clairvoyance isn't proficient enough, ask botchan", "Yes, I am completely certain"];
+        if (msg.content.substring(0, 6).toLowerCase() == "should" || msg.content.substring(0, 5).toLowerCase() == "would" || msg.content.substring(0, 5).toLowerCase() == "could" || msg.content.substring(0, 5).toLowerCase() == "will"") {
             var picker = Math.floor(Math.random() * (dialogues.length - 1));
             this.reply(msg, dialogues[picker]);
         }
@@ -117,143 +112,12 @@ function startPingPong() {
                     this.reply(msg, "no ammount to be added found");
                 } else
                     doge.addCoins(ammount);
-            } else if (msg.content.substring(8, 13) == "ruzyu") {
-                var ammount = parseInt(msg.content.substring(14));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    ruzyu.addCoins(ammount);
-            } else if (msg.content.substring(8, 16) == "shepherd") {
-                var ammount = parseInt(msg.content.substring(17));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    shepherd.addCoins(ammount);
-            } else if (msg.content.substring(8, 16) == "marferin") {
-                var ammount = parseInt(msg.content.substring(17));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    marferin.addCoins(ammount);
-            } else if (msg.content.substring(8, 15) == "hardeep") {
-                var ammount = parseInt(msg.content.substring(16));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    hardeep.addCoins(ammount);
-            } else if (msg.content.substring(8, 11) == "1it") {
-                var ammount = parseInt(msg.content.substring(12));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    lit.addCoins(ammount);
-            } else if (msg.content.substring(8, 15) == "crypton") {
-                var ammount = parseInt(msg.content.substring(16));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    crypton.addCoins(ammount);
-            } else if (msg.content.substring(8, 15) == "nucleus") {
-                var ammount = parseInt(msg.content.substring(16));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    nucleus.addCoins(ammount);
-            } else if (msg.content.substring(8, 13) == "sheep") {
-                var ammount = parseInt(msg.content.substring(14));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    sheep.addCoins(ammount);
-            } else if (msg.content.substring(8, 13) == "riyaj") {
-                var ammount = parseInt(msg.content.substring(14));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    riyaj.addCoins(ammount);
-            } else if (msg.content.substring(8, 13) == "touka") {
-                var ammount = parseInt(msg.content.substring(14));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    touka.addCoins(ammount);
-            } else if (msg.content.substring(8, 12) == "jaws") {
-                var ammount = parseInt(msg.content.substring(13));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    jaws.addCoins(ammount);
-            } else if (msg.content.substring(8, 14) == "reaper") {
-                var ammount = parseInt(msg.content.substring(15));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    reaper.addCoins(ammount);
-            } else if (msg.content.substring(8, 12) == "goku") {
-                var ammount = parseInt(msg.content.substring(13));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    goku.addCoins(ammount);
-            } else if (msg.content.substring(8, 12) == "anna") {
-                var ammount = parseInt(msg.content.substring(13));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    anna.addCoins(ammount);
-            } else if (msg.content.substring(8, 12) == "sway") {
-                var ammount = parseInt(msg.content.substring(13));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    sway.addCoins(ammount);
-            } else if (msg.content.substring(8, 16) == "peripsis") {
-                var ammount = parseInt(msg.content.substring(17));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    peripsis.addCoins(ammount);
-            } else if (msg.content.substring(8, 15) == "odyssey") {
-                var ammount = parseInt(msg.content.substring(16));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    odyssey.addCoins(ammount);
-            } else if (msg.content.substring(8, 14) == "cursed") {
-                var ammount = parseInt(msg.content.substring(15));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    cursed.addCoins(ammount);
-            } else if (msg.content.substring(8, 14) == "acryuz") {
-                var ammount = parseInt(msg.content.substring(15));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    acryuz.addCoins(ammount);
-            } else if (msg.content.substring(8, 15) == "rampage") {
-                var ammount = parseInt(msg.content.substring(16));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    rampage.addCoins(ammount);
-            } else if (msg.content.substring(8, 13) == "rubik") {
-                var ammount = parseInt(msg.content.substring(14));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    rubik.addCoins(ammount);
-            } else if (msg.content.substring(8, 14) == "legend") {
-                var ammount = parseInt(msg.content.substring(15));
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else
-                    legend.addCoins(ammount);
+          
             } else {
                 this.reply(msg, "no user found");
             }
         }
-        if (msg.content.substring(0, 7).toLowerCase() == "getcoin") {
+        if (msg.content.substring(0, 7).toLowerCase() == "getcoin") {  //this is SUPER efficient
             var a = msg.content.substring(8);
             var b = false;
             var c;
@@ -271,73 +135,17 @@ function startPingPong() {
                 output("pong'd <b>" + msg.sender.username + "</b>");
             }
         }
-        if (msg.content === "1it") {
-            this.reply(msg, "'add me on pornhub' - 1it 2k16");
-        }
-        if (msg.content.substring(0, 6) == "gamble") {
-            var a = 7;
-            var b = false;
-            var c = 0;
-            var f;
-            for (var i = 0; i < people.length; i++) {
-                a += people[i].getName().length;
-                for (var j = 0; j < people.length; j++) {
-                    if (msg.content.substring(7, a) == people[i].getName()) {
-                        //maybe .getName()
-                        b = true;
-                        c = a;
-                        f = people[i];
-                    }
-                }
-                a = 7;
-            }
-            if (b) {
-                var d = parseInt(msg.content.substring(c + 2));
-                if (!isNaN(d)) {
-                    if (d > f.getCoins) {
-                        //maybe .getCoin()
-                        this.reply("You don't have enough coins (" + d + ")");
-                    } else {
-                        var g = Math.random() * 100;
-                        var h = (g > 50);
-                        if (h) {
-                            f.addCoins(d);
-                            this.reply("Rolled a " + h + ". You won " + d + " coins")
-                        } else {
-                            f.subtractCoins(d);
-                            this.reply("Rolled a " + h + ". You lost " + d + " coins");
-                        }
-                    }
-                } else {
-                    this.reply("ammount to gamble not found");
-                }
-            } else {
-                this.reply(msg, "user not found")
-            }
-        }
-        if (msg.content === "party") {
+      
+        if (msg.content === "party" || msg.content === "server?") {
             this.reply(msg, party);
             output("pong'd <b>" + msg.sender.username + "</b>");
         }
         if (msg.content.substring(0, 8) == "setparty") {
             party = msg.content.substring(9, msg.content.length);
-            this.reply(msg, "party set to " + party);
+            this.reply(msg, "party set to " + party + "     Type party to view party code");
             output("pong'd <b>" + msg.sender.username + "</b>");
         }
-        if (msg.content == "hardeep") {
-            this.reply(msg, "'I've never watched porn' - Hardeep 2016");
-        }
-        if (msg.content === "cursed") {
-            this.reply(msg, "u have been cursed 4 lyfe now go die in a hole and jump into traffic no one cares and KYS");
-            output("pong'd <b>" + msg.sender.username + "</b>");
-        }
-        if (msg.content === "acryuz") {
-            this.reply(msg, "Cursed, I'm gonna find you and shove a corn dog up your ass.");
-            output("pong'd <b>" + msg.sender.username + "</b>");
-        }
-        if (msg.content === "tag") {
-            this.reply(msg, "〈ɪɳȷ〉                                                                                  (aka Indian Jizz)");
-        }
+
         if (msg.content.substring(0, 3) === "bet") {
             if (msg.content.substring(4, 11) == "hardeep") {
                 //subtract substring parameters by 3	//hardeep
