@@ -6,7 +6,7 @@ Commands:
 - setparty
 - tag
 - penis - find length of penis (randomized, but will be set in the future)
-- fortune teller (should/would)
+- fortune teller (should/would/could/will)
 - getcoin <person>
 - addcoin <person> <ammount>
 
