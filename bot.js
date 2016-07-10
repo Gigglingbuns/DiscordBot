@@ -101,7 +101,7 @@ function startPingPong() {
             for (var i=0;i<10000;i++){
                 console.log(i);
             }
-           this.sendMessage(msg,"poop");
+           this.sendMessage(msg,"testing, testing, 123");
         }
      
         var dialogues = ["Only pingu knows the answer to that.","Never, never ever ever ever ever.", "yes", "no", "No, not in a million years", "My subconscious tells me no", "Nope, definitely not", "I don't think so, but I could be wrong", "Nope, not a chance", "Probably, I don't see why not", "My spiritual ancestors confirms, it is surely to happen!", "Yes, it will happen 200%", "My level of clairvoyance isn't proficient enough, ask botchan", "Yes, I am completely certain"];
@@ -110,7 +110,7 @@ function startPingPong() {
             this.reply(msg, dialogues[picker]);
         }
         
-        
+        /* FOR REFERENCE
         if (msg.content.substring(0, 7) == "addcoin") {
             if (msg.content.substring(8, 12) == "doge") {
                 var ammount = parseInt(msg.content.substring(13));
@@ -140,7 +140,7 @@ function startPingPong() {
                 this.reply(msg, "user not found");
                 output("pong'd <b>" + msg.sender.username + "</b>");
             }
-        }
+        }*/
       
         if (msg.content === "party" || msg.content === "server?") {
             this.reply(msg, party);
@@ -148,11 +148,11 @@ function startPingPong() {
         }
         if (msg.content.substring(0, 8) == "setparty") {
             party = msg.content.substring(9, msg.content.length);
-            this.reply(msg, "party set to " + party + "     Type party to view party code");
+            this.reply(msg, "party set to " + party + "     Type 'party' to view party code");
             output("pong'd <b>" + msg.sender.username + "</b>");
         }
-
-        if (msg.content.substring(0, 3) === "bet") {
+/* FOR REFRENCE
+        if (msg.content.substring(0, 3) === "bet") { 
             if (msg.content.substring(4, 11) == "hardeep") {
                 //subtract substring parameters by 3	//hardeep
                 var ammount = parseInt(msg.content.substring(16));
@@ -166,226 +166,18 @@ function startPingPong() {
                         hardeep.betCoins(ammount);
                     //Change function to betCoins
                 }
-            } else if (msg.content.substring(4, 7) == "1it") {
-                //1it
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (lit.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        lit.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 13) == "ruzyu") {
-                //ruzyu
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (lit.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        ruzyu.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 15) == "crypton") {
-                //crypton
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (crypton.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        crypton.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 15) == "nucleus") {
-                //nucleus
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (nucleus.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        nucleus.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 13) == "sheep") {
-                //sheep
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (sheep.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        sheep.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 13) == "riyaj") {
-                //riyaj
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (riyaj.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        riyaj.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 13) == "touka") {
-                //touka
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (touka.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        touka.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 12) == "jaws") {
-                //jaws
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (jaws.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        jaws.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 14) == "reaper") {
-                //reaper
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (reaper.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        reaper.addCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 12) == "goku") {
-                //goku
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (goku.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        goku.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 12) == "anna") {
-                //anna
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (anna.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        anna.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 12) == "sway") {
-                //sway
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (sway.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        sway.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 16) == "peripsis") {
-                //peripsis
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (hardeep.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        peripsis.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 15) == "odyssey") {
-                //odyssey
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (hardeep.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        odyssey.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 14) == "cursed") {
-                //cursed
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (hardeep.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        cursed.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 14) == "acryuz") {
-                //acryuz
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (hardeep.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        acryuz.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 15) == "rampage") {
-                //rampage
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (hardeep.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        rampage.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 13) == "rubik") {
-                //rubik
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (hardeep.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        rubik.betCoins(ammount);
-                }
-            } else if (msg.content.substring(8, 14) == "legend") {
-                //legend
-                var ammount = parseInt(msg.content.substring());
-                if (isNaN(ammount)) {
-                    this.reply(msg, "no ammount to be added found");
-                } else {
-                    if (hardeep.coins < ammount) {
-                        this.reply(msg, "you don't have enough coins");
-                    } else
-                        legend.betCoins(ammount);
-                }
             }
-        }
-        if (msg.content == "legend") {
-            this.reply(msg, "shoutout to all my hoes, goku, crypton, touka, burnt, cursed and sway");
-        }
+        } */
         if (msg.content.substring(0, 5) === "penis") {
-            if (msg.content.substring(6, 10) == "anna" || msg.content.substring(6, 12) == "acryuz") {
-                this.reply(msg, "You have a vagina! (!)");
-            } else {
                 var penis = "";
-                var penislength = ((Math.random() * 20) + 1);
+                var penislength = 0;
+            if (msg.content.substring(6, 10) == "anna" || msg.content.substring(6, 12) == "acryuz") {
+for (var i = 0; i < penislength; i++) {
+                    penis = penis + "三"
+                }
+                this.reply(msg, msg.content.substring(5, msg.content.length) + " 8" + penis + "D");
+            } else {
+                 penislength = ((Math.random() * 20) + 1);
                 for (var i = 0; i < penislength; i++) {
                     penis = penis + "三"
                 }
