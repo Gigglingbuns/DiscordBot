@@ -178,10 +178,10 @@ function startPingPong() {
                 var checker = false;
                 for(var ib = 0; i<people.length;ib++){
                     console.log("location");
-                    if(people[ib].getName == msg.content.substring(6)){
+                    if(people[ib].getName() == msg.content.substring(6)){
                         penislength = people[ib].getPenis();
                         checker = true;
-                        console.log(people[ib].getName);
+                        console.log(people[ib].getName());
                     }
                 }
                 if(!checker){
