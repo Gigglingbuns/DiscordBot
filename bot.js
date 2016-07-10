@@ -24,11 +24,12 @@ person.prototype.getPenis = function(){
 }
 var cuffin = new person("cuffin",15);
 var blazingfire = new person("@BlazingFire007",12);
-var gabidou = new person("@Gabidou99",7);
+var gabidou = new person("@Gabidou99 (YT: Shyguymask)",7);
 var pike = new person("pike",20);
 var rh1 = new person("@RH1-N0",0);
-var teyru = new person("@Teyru",2);
+var teyru = new person("@X SML Pingu ❄",2);
 var cavalry = new person("@The Cavalry",9);
+var joshi = new person("@joshi77",6);
 var demic = new person("@killdemic",13);
 var gigglingbuns = new person("@Gigglingbuns",16);
 var eclipse = new person("@[RDT] Eclipse",7);
@@ -40,8 +41,9 @@ var haidere = new person("@[RDT] Hai Dere",10);
 var GenerikShadow = new person("@GenerikShadow",9);
 var killer = new person("@The Killer",11);
 var test = new person("@belungawhale",12);
+var huntsman = new person("@X Huntsman",9);
 
-var people = [test,cuffin,blazingfire,gabidou,pike,rh1,teyru,cavalry,demic,gigglingbuns,eclipse,flames,drflash55,nickmushu,zuppyterra,haidere,GenerikShadow,killer];
+var people = [huntsman,joshi,test,cuffin,blazingfire,gabidou,pike,rh1,teyru,cavalry,demic,gigglingbuns,eclipse,flames,drflash55,nickmushu,zuppyterra,haidere,GenerikShadow,killer];
 
 function getEmail() {
     if (document.getElementById("email").value)
