@@ -44,7 +44,9 @@ var test = new person("@[RDT] test",12);
 var huntsman = new person("@X Huntsman",9);
 var greenland = new person("@GreenlandNATO [RDT]",5);
 var labla = new person("@//Lablaa",1);
-var people = [labla,greenland,huntsman,joshi,test,cuffin,blazingfire,gabidou,pike,rh1,teyru,cavalry,demic,gigglingbuns,eclipse,flames,drflash55,nickmushu,zuppyterra,haidere,GenerikShadow,killer];
+var packerfan = new person("@! PackerFan ! ⏰ 2016 ⏰",6)
+
+var people = [packerfan,labla,greenland,huntsman,joshi,test,cuffin,blazingfire,gabidou,pike,rh1,teyru,cavalry,demic,gigglingbuns,eclipse,flames,drflash55,nickmushu,zuppyterra,haidere,GenerikShadow,killer];
 
 function getEmail() {
     if (document.getElementById("email").value)
