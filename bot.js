@@ -40,10 +40,11 @@ var zuppyterra = new person("@Zuppyterra",6);
 var haidere = new person("@[RDT] Hai Dere",10);
 var GenerikShadow = new person("@GenerikShadow",9);
 var killer = new person("@The Killer",11);
-var test = new person("@belungawhale",12);
+var test = new person("@[RDT] test",12);
 var huntsman = new person("@X Huntsman",9);
-
-var people = [huntsman,joshi,test,cuffin,blazingfire,gabidou,pike,rh1,teyru,cavalry,demic,gigglingbuns,eclipse,flames,drflash55,nickmushu,zuppyterra,haidere,GenerikShadow,killer];
+var greenland = new person("@GreenlandNATO [RDT]",5);
+var labla = new person("@//Lablaa",1);
+var people = [labla,greenland,huntsman,joshi,test,cuffin,blazingfire,gabidou,pike,rh1,teyru,cavalry,demic,gigglingbuns,eclipse,flames,drflash55,nickmushu,zuppyterra,haidere,GenerikShadow,killer];
 
 function getEmail() {
     if (document.getElementById("email").value)
