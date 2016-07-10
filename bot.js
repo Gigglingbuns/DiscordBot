@@ -97,6 +97,10 @@ function startPingPong() {
     });
     pingPongClient.on("message", function(msg) {
         if(msg.content=="123"){
+            
+            for (var i=0;i<2000;i++){
+                console.log(i);
+            }
            this.sendMessage(msg,"poop");
         }
      
@@ -105,6 +109,8 @@ function startPingPong() {
             var picker = Math.floor(Math.random() * (dialogues.length - 1));
             this.reply(msg, dialogues[picker]);
         }
+        
+        
         if (msg.content.substring(0, 7) == "addcoin") {
             if (msg.content.substring(8, 12) == "doge") {
                 var ammount = parseInt(msg.content.substring(13));
