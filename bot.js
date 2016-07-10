@@ -105,7 +105,7 @@ function startPingPong() {
         }
      
         var dialogues = ["Only pingu knows the answer to that.","Never, never ever ever ever ever.", "yes", "no", "No, not in a million years", "My subconscious tells me no", "Nope, definitely not", "I don't think so, but I could be wrong", "Nope, not a chance", "Probably, I don't see why not", "My spiritual ancestors confirms, it is surely to happen!", "Yes, it will happen 200%", "My level of clairvoyance isn't proficient enough, ask botchan", "Yes, I am completely certain"];
-        if (msg.content.substring(0, 6).toLowerCase() == "should" || msg.content.substring(0, 5).toLowerCase() == "would" || msg.content.substring(0, 5).toLowerCase() == "could" || msg.content.substring(0, 5).toLowerCase() == "will"") {
+        if (msg.content.substring(0, 6).toLowerCase() == "should" || msg.content.substring(0, 5).toLowerCase() == "would" || msg.content.substring(0, 5).toLowerCase() == "could" || msg.content.substring(0, 4).toLowerCase() == "will" ){
             var picker = Math.floor(Math.random() * (dialogues.length - 1));
             this.reply(msg, dialogues[picker]);
         }
