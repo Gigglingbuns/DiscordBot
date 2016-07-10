@@ -1,11 +1,11 @@
 var classes = document.getElementsByClassName("outputConsole");
 var party = "";
 var pingPongRunning = false, pingPongClient;
-var person = function(name) {
+var person = function(name,penis) {
     this.coins = 50;
     this.bet = 0;
     this.name = name;
-    // this.penis = penis;
+ this.penis = penis;
 }
 person.prototype.addCoins = function(ammount) {
     this.coins += ammount;
@@ -19,30 +19,14 @@ person.prototype.subtractCoins = function(ammount) {
 person.prototype.getName = function() {
     return this.name;
 }
-var doge = new person("doge");
-var marferin = new person("marferin");
-var shepherd = new person("shepherd");
-var ruzyu = new person("ruzyu");
-var hardeep = new person("hardeep");
-var riyaj = new person("riyaj");
-var lit = new person("1it");
-var crypton = new person("crypton");
-var nucleus = new person("nucleus");
-var sheep = new person("sheep");
-var touka = new person("touka");
-var jaws = new person("jaws");
-var reaper = new person("reaper");
-var goku = new person("goku");
-var anna = new person("anna");
-var sway = new person("sway");
-var peripsis = new person("peripsis");
-var odyssey = new person("odyssey");
-var cursed = new person("cursed");
-var acryuz = new person("acryuz");
-var rampage = new person("rampage");
-var rubik = new person("rubik");
-var legend = new person("legend");
-var people = [shepherd, doge, marferin, ruzyu, hardeep, riyaj, lit, crypton, nucleus, sheep, touka, jaws, reaper, goku, anna, sway, peripsis, odyssey, cursed, acryuz, rampage, rubik, legend];
+var cuffin = new person("cuffin",15);
+var blazingfire = new person("@BlazingFire007",12);
+var gabidou = new person("@Gabidou99",7);
+var pike = new person("pike",20);
+
+
+
+var people = [];
 function getEmail() {
     if (document.getElementById("email").value)
         return document.getElementById("email").value;
