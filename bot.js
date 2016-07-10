@@ -38,6 +38,7 @@ var GenerikShadow = new person("@GenerikShadow",9);
 var killer = new person("@The Killer",11);
 
 var people = [cuffin,blazingfire,gabidou,pike,rh1,teyru,cavalry,demic,gigglingbuns,eclipse,flames,drflash55,nickmushu,zuppyterra,haidere,GenerikShadow,killer];
+
 function getEmail() {
     if (document.getElementById("email").value)
         return document.getElementById("email").value;
