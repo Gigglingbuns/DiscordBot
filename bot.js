@@ -177,8 +177,7 @@ function startPingPong() {
                 var penislength = 0;
                 var checker = false;
                 for(var ib = 0; i<people.length;ib++){
-                    console.log(people[ib].getName);
-                    console.log(msg.content.substring(6));
+                    console.log("location");
                     if(people[ib].getName == msg.content.substring(6)){
                         penislength = people[ib].getPenis();
                         checker = true;
