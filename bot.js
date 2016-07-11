@@ -161,6 +161,13 @@ function startPingPong() {
             this.reply(msg, "party set to " + party + "     Type 'party' to view party code");
             output("pong'd <b>" + msg.sender.username + "</b>");
         }
+        if (msg.content.substring(0,2)=="GG"){
+            
+            for(var ic = 0; ic<5000;ic++){
+                console.log(ic);
+            }
+            this.sendMessage(msg,"GG");
+        }
 /* FOR REFRENCE
         if (msg.content.substring(0, 3) === "bet") { 
             if (msg.content.substring(4, 11) == "hardeep") {
