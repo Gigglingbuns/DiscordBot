@@ -166,7 +166,7 @@ function startPingPong() {
             for(var ic = 0; ic<5000;ic++){
                 console.log(ic);
             }
-            this.sendMessage(msg,"gg");
+            this.sendMessage(msg,"egg");
         }
 /* FOR REFRENCE
         if (msg.content.substring(0, 3) === "bet") { 
