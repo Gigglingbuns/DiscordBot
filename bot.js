@@ -22,19 +22,19 @@ person.prototype.getName = function() {
 person.prototype.getPenis = function(){
     return this.penis;
 }
-var cuffin = new person("cuffin",15);
-var blazingfire = new person("@BlazingFire007",12);
+var cuffin = new person("@Çµƒƒ¡и",15);
+var blazingfire = new person("@BlazingFire007",12);  //may need revise
 var gabidou = new person("@Gabidou99 (YT: Shyguymask)",7);
-var pike = new person("pike",20);
+var pike = new person("@Pike! Youtube - Pikethan",20);
 var rh1 = new person("@RH1-N0",0);
 var teyru = new person("@X SML Pingu ❄",2);
 var cavalry = new person("@The Cavalry",9);
 var joshi = new person("@joshi77",6);
-var demic = new person("@killdemic",13);
+var demic = new person("@killdemic",13);  //may need revise
 var gigglingbuns = new person("@Gigglingbuns",16);
 var eclipse = new person("@[RDT] Eclipse",7);
-var flames = new person("@Fl🔥mes",4);
-var drflash55 = new person("@Drflash55",7);
+var flames = new person("@Monoboxer",4);
+var drflash55 = new person("@TriHard 1",7);
 var nickmushu = new person("@nickmushu",16);
 var zuppyterra = new person("@Zuppyterra",6);
 var haidere = new person("@[RDT] Hai Dere",10);
