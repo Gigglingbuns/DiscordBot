@@ -161,6 +161,9 @@ function startPingPong() {
             this.reply(msg, "party set to " + party + "     Type 'party' to view party code");
             output("pong'd <b>" + msg.sender.username + "</b>");
         }
+        if(msg.content.toLowerCase()=="lol"){
+            this.sendMessage(msg,"lmao");
+        }
         if (msg.content.substring(0,2)=="GG"){
             
             for(var ic = 0; ic<5000;ic++){
