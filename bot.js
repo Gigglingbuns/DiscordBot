@@ -133,6 +133,7 @@ function startPingPong() {
                 this.reply(msg, "no user found");
             }
         }
+        */
         if (msg.content.substring(0, 7).toLowerCase() == "getcoin") {  //this is SUPER efficient
             var a = msg.content.substring(8);
             var b = false;
@@ -150,7 +151,7 @@ function startPingPong() {
                 this.reply(msg, "user not found");
                 output("pong'd <b>" + msg.sender.username + "</b>");
             }
-        }*/
+        }
       
         if (msg.content === "party" || msg.content === "server?") {
             this.reply(msg, party);
