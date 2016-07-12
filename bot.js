@@ -153,7 +153,12 @@ function startPingPong() {
                 output("pong'd <b>" + msg.sender.username + "</b>");
             }
         }
-      
+        if (msg.content.substring(0,24)=="Everybody say welcome to"){
+            for(var packerfart=0;packerfart<5000;packerfart++){
+                console.log(packerfart);
+            }
+            this.sendMessage(msg,"Welcome");
+        }
         if (msg.content === "party" || msg.content === "server?") {
             this.reply(msg, party);
             output("pong'd <b>" + msg.sender.username + "</b>");
