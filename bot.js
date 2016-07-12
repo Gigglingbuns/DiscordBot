@@ -134,6 +134,7 @@ function startPingPong() {
             }
         }
         */
+       
         if (msg.content.substring(0, 7).toLowerCase() == "getcoin") {  //this is SUPER efficient
             var a = msg.content.substring(8);
             var b = false;
