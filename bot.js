@@ -178,6 +178,14 @@ function startPingPong() {
             }
             this.sendMessage(msg,"egg");
         }
+        if (msg.content.toLowerCase()=="" ){
+            this.reply(msg, "");
+            output("pong'd <b>" + msg.sender.username + "</b>");
+        }
+        if (msg.content.toLowerCase()=="" ){
+            this.reply(msg, "");
+            output("pong'd <b>" + msg.sender.username + "</b>");
+        }
 /* FOR REFRENCE
         if (msg.content.substring(0, 3) === "bet") { 
             if (msg.content.substring(4, 11) == "hardeep") {
