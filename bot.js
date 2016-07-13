@@ -176,7 +176,35 @@ function startPingPong() {
             for(var ic = 0; ic<5000;ic++){
                 console.log(ic);
             }
-            this.sendMessage(msg,"egg");
+            this.sendMessage(msg,":egg:");
+        }
+         if (msg.content.toLowerCase()=="what's 9+10" ){
+            this.reply(msg, "21");
+            output("pong'd <b>" + msg.sender.username + "</b>");
+        }
+        if (msg.content.toLowerCase()=="!activate" ){
+            this.reply(msg, "Activating....");
+            output("pong'd <b>" + msg.sender.username + "</b>");
+        }
+        if (msg.content.toLowerCase()=="!boot" ){
+            this.reply(msg, "Booting up...");
+            output("pong'd <b>" + msg.sender.username + "</b>");
+        }
+        if (msg.content.toLowerCase()=="!deactivate" ){
+            this.reply(msg, "Deactivating");
+            output("pong'd <b>" + msg.sender.username + "</b>");
+        }
+        if (msg.content.toLowerCase()=="" ){
+            this.reply(msg, "");
+            output("pong'd <b>" + msg.sender.username + "</b>");
+        }
+        if (msg.content.toLowerCase()=="" ){
+            this.reply(msg, "");
+            output("pong'd <b>" + msg.sender.username + "</b>");
+        }
+        if (msg.content.toLowerCase()=="" ){
+            this.reply(msg, "");
+            output("pong'd <b>" + msg.sender.username + "</b>");
         }
 /* FOR REFRENCE
         if (msg.content.substring(0, 3) === "bet") { 
